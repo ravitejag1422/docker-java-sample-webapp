@@ -6,7 +6,7 @@ pipeline {
                 git branch: 'master', url: "https://github.com/ravitejag1422/docker-java-sample-webapp.git"
             }
         }
-
+    }
     stages {
         stage('Package') {
             steps {
