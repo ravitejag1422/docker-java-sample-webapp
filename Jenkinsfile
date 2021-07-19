@@ -1,10 +1,12 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
-        echo 'checkout code...'
-        checkout scm
-    }
+        stage ('Clone') {
+            steps {
+                git branch: 'master', url: "https://github.com/ravitejag1422/docker-java-sample-webapp.git"
+            }
+        }
+
     stages {
         stage('Package') {
             steps {
