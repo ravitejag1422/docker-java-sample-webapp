@@ -5,5 +5,6 @@ node {
     }
   stage ('Build Jar') {
             sh "mvn clean install"
+      sh "docker build -t testpipeline ."
     } 
 }
