@@ -4,6 +4,6 @@ node {
         checkout scm
     }
   stage ('Build Jar') {
-            sh "mvn clean package -Dmaven.test.skip=true"
+            sh "mvn clean install"
     } 
 }
