@@ -11,7 +11,6 @@ node {
       sh "docker push 161761483506.dkr.ecr.us-east-1.amazonaws.com/testingimages:latest"
       sh "docker stop javacontainer"
       sh "docker rm javacontainer"
-      sh "docker pull 
       sh "docker run -d -p 8082:8082 --name javacontainer 161761483506.dkr.ecr.us-east-1.amazonaws.com/testingimages:latest"
     } 
 }
