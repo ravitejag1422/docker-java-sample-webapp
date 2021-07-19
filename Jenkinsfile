@@ -1,7 +1,12 @@
 pipeline {
     agent any
+    node {
+    stage('Build') {
+        echo 'checkout code...'
+        checkout scm
+    }
     stages {
-        stage('Build') {
+        stage('Package') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
             }
