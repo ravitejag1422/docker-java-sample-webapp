@@ -1,5 +1,6 @@
 pipeline {
     agent any
+node {
     stage('Build') {
         echo 'checkout code...'
         checkout scm
