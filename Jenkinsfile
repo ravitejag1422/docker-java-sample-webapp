@@ -7,6 +7,6 @@ node {
             sh "mvn clean install"
       sh "docker build -t testpipeline ."
 
-      sh "docker run -d -p 8082:8082 --name javacontainer testpipeline ."
+      sh "docker run -d -p 8082:8082 --name javacontainer testpipeline"
     } 
 }
